@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="healthproject.PillsNotificationController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="200.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane maxHeight="200.0" maxWidth="405.0" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #1e90ff;" GridPane.columnSpan="2147483647">
+         <children>
+            <Label layoutX="126.0" layoutY="20.0" text="Medicine Reminder" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="56.0" fitWidth="58.0" layoutX="70.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/reminder.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="400.0" GridPane.rowIndex="3">
+         <children>
+            <Label alignment="CENTER" text="Priority" textFill="#176fc3">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="low" mnemonicParsing="false" selected="true" text="Low" textFill="#08941b">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="togglegroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="mediam" mnemonicParsing="false" text="Medium" textFill="#aea522" toggleGroup="$togglegroup">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="high" mnemonicParsing="false" text="High" textFill="#f80505" toggleGroup="$togglegroup">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="66.0" prefWidth="400.0" GridPane.rowIndex="4">
+         <children>
+            <DatePicker fx:id="dp_date" promptText="date" style="-fx-background-color: #1e90ff #1e90ff;">
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </DatePicker>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="335.0" GridPane.rowIndex="7">
+         <children>
+            <Button fx:id="AddButton" alignment="CENTER" mnemonicParsing="false" onAction="#addCell" prefHeight="50.0" prefWidth="96.0" style="-fx-background-color: #1e90ff #1e90ff;" text="Add" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#updateRow2" prefHeight="50.0" prefWidth="96.0" style="-fx-background-color: #1e90ff #1e90ff;" text="Update" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </HBox>
+      <TextArea fx:id="tfnote" prefHeight="78.0" prefWidth="319.0" promptText="Notes..." style="-fx-background-color: #1e90ff #1e90ff;" GridPane.rowIndex="6">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </TextArea>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+         <children>
+            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="400.0">
+               <children>
+                  <JFXTimePicker fx:id="tp_time"  defaultColor="DODGERBLUE" />
+               </children>
+            </HBox>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Label text="Medicine Name" textFill="#176fc3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfname" maxWidth="180.0" prefHeight="37.0" prefWidth="180.0" promptText="Medicine Name">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <Label text="Medicine ID" textFill="#176fc3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="30.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfid" maxWidth="180.0" prefHeight="37.0" prefWidth="180.0" promptText="Medicine ID">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#goback" style="-fx-background-color: #1e90ff #1e90ff #1e90ff;" GridPane.rowIndex="7">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</GridPane>
