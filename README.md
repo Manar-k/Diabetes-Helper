@@ -4,11 +4,13 @@
 
 This application enable user to:
 
+• login.
+
 • add/modify/delete medicine time alarm and its data.
 
 • checking on/off needed medicines and tools.
 
-• display data.
+• display diabetes info.
 
 
 The application sends a notification at specific time that the user select.
