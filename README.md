@@ -1,4 +1,4 @@
-# medicine-time-notification
+# Diabetes Helper App
  
 (Advanced Programming Project) Designed and implemented an application in 5-person team using Java, JavaFX, and Mysql Workbench.
 
